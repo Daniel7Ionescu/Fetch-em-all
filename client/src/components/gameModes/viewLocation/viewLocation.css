@@ -1,6 +1,8 @@
 .non-explored {
     background: url('./img/area_bkg.png') no-repeat center / cover;
-    height: 855px;
+    /* height: 855px; */
+    /* height: 100vh; */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,6 +123,8 @@
 .explored {
     background: url('./img/scout-bkg.jpg') no-repeat center / cover;
     min-height: 855px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .explored-text {
@@ -143,16 +147,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .explored-poke-container {
     display: grid;
-    grid-template-columns: repeat(4,2fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-row: 1fr;
 }
 
 .tastyPoke-img {
-    width: 300px;
+    width: 250px;
     image-rendering: pixelated;
 
 }

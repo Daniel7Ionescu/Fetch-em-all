@@ -1,7 +1,9 @@
 .world-map {
     background: url('./img/world-map.jpg') no-repeat center / cover;
-    height: 855px;
-    position: relative;
+    /* height: 855px; */
+    height: 100%;
+    /* margin-top: 70px; NU */ 
+    /* position: relative; */
 }
 
 .loc {

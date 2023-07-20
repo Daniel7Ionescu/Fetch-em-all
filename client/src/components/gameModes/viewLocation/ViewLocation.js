@@ -42,7 +42,7 @@ const ViewLocation = () => {
     }
 
     return (  
-        <div>
+        <>
             {!game.isExplored 
                 ? <div className="non-explored">
                     <div className="non-explored-container">
@@ -83,7 +83,7 @@ const ViewLocation = () => {
 
                 </div>
             }
-        </div>
+        </>
     );
 }
  

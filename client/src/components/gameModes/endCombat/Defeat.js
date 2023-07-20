@@ -15,7 +15,7 @@ const Defeat = ({winner, loser, handleEndCombat}) => {
                 </div>
             </div>
 
-            <div className="victory-container">
+            <div className="defeat-container">
 
                 <div className="victory-pokemons">
 

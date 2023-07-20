@@ -5,7 +5,6 @@ import image from '../../assets/img/backpack.png';
 
 
 const HeaderInGame = () => {
-
     const game = useContext(GameContext);
 
     function returnToMap() {

@@ -8,15 +8,17 @@
 
 .combatZone-container {
     background: url(./img/combat-bkg.png) no-repeat center / cover;
-    padding: 8px;
-    position: relative;
+    padding: 0;
+    /* position: relative; */
+    height: 100%;
 }
 
 .combat-log-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    /* margin-top: 5px; */
+    /* padding: 20px; */
 }
 
 .combat-log {
