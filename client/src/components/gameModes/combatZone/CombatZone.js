@@ -32,6 +32,7 @@ const CombatZone = () => {
                 if(p1CurrentHp <= 0 ){
                     game.setLoser(game.player1)
                     game.setWinner(game.player2)
+                    game.setIsPlayer1Winner(false);
                 } else if (p2CurrentHp <= 0) {
                     game.setLoser(game.player2)
                     game.setWinner(game.player1)  

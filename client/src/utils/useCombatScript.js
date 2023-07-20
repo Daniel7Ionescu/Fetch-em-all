@@ -93,24 +93,27 @@ export function useCombatScript(scriptInfo) {
                     break;
                 }
                 case "seppuku": {
-                    let damage = attack(attacker, defender);
+                    // let damage = attack(attacker, defender);
                     (async () => {
                         setIsScriptRunning(true);
 
-                        setCombatLog(`${attacker.name} is attacking!`);
+                        setCombatLog(`${attacker.name} is fainting!`);
                         creatureSound()
                         await wait(1000);
                         // attack sound and animation
-                        turn === 0 ? setP1CurrentHp(0) 
-                        : setP1CurrentHp(health => (health - damage > 0 ? health - damage : 0)) 
-                        creatureSound()
+                        // turn === 0 ? setP1CurrentHp(0) 
+                        // : setP1CurrentHp(health => (health - damage > 0 ? health - damage : 0)) 
+                       
+
+                        setP1CurrentHp(0)
+
                         await wait(1000);
                         // defender sound and animation
-                        setCombatLog(`${defender.name} was hit!`);
-                        await wait(1000);
-                        setCombatLog(`It's ${defender.name}'s turn!`);
-                        setTurn(turn === 0 ? 1 : 0);
-                        await wait(1000);
+                        // setCombatLog(`${defender.name} was hit!`);
+                        // await wait(1000);
+                        // setCombatLog(`It's ${defender.name}'s turn!`);
+                        // setTurn(turn === 0 ? 1 : 0);
+                        // await wait(1000);
                         setIsScriptRunning(false);
                     })()
                     break;

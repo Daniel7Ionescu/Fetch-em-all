@@ -1,9 +1,18 @@
 import mapImg from '../../../assets/img/endCombat/map.png';
 import dizzy from '../../../assets/img/endCombat/dizzy.gif';
+import { useContext } from 'react';
+import { GameContext } from '../../../utils/GameContext';
 
 
 const Defeat = ({winner, loser, handleEndCombat}) => {
+    const game = useContext(GameContext)
+    console.log("PLayer 1:", game.player1);
+
+    console.log("Winner", winner);
+
     return ( 
+
+        
 
         <div className="main-defeat-container">
     

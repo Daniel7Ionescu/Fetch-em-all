@@ -14,15 +14,30 @@ const ModeControl = () => {
 
 
     return (  
-        <div className="main-container">
+        <>      
+            {game.gameMode !== 'introScreen' && game.gameMode !== 'startMenu' && 
+                <div className="main-container">
+                
+                    {game.gameMode === "worldMap" && <WorldMap/>}
+                    {game.gameMode === "viewLocation" && <ViewLocation/>}
+                    {game.gameMode === "combatZone" && <CombatZone/>}
+                    {game.gameMode === "endCombat" && <EndCombat/>}
+                    {game.isBackpackOpen && <Backpack/>}
+                </div>
+            }
+            
             {game.gameMode === "introScreen" && <IntroScreen/>}
             {game.gameMode === "startMenu" && <StartMenu/>}
-            {game.gameMode === "worldMap" && <WorldMap/>}
-            {game.gameMode === "viewLocation" && <ViewLocation/>}
-            {game.gameMode === "combatZone" && <CombatZone/>}
-            {game.gameMode === "endCombat" && <EndCombat/>}
-            {game.isBackpackOpen && <Backpack/>}
-        </div>
+            {/* {game.gameMode === "introScreen" || game.gameMode === "startMenu" &&
+                 <div className="starter-container">
+                    {game.gameMode === "introScreen" && <IntroScreen/>}
+                    {game.gameMode === "startMenu" && <StartMenu/>}
+                </div>
+            } */}
+           
+           
+        </>
+       
     );
 }
  
