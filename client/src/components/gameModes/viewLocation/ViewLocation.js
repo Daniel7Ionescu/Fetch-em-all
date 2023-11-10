@@ -4,12 +4,11 @@ import { GameContext } from "../../../utils/GameContext";
 import './viewLocation.css';
 
 const ViewLocation = () => {
-
     const game = useContext(GameContext);
 
     const areaData = UseFetch(`https://pokeapi.co/api/v2/location-area/${game.locationData.id}`);
-    function handleScouting() {
 
+    function handleScouting() {
         const pokemonsArr = [];
         areaData.pokemon_encounters.map((poke) => {
             fetch(`https://pokeapi.co/api/v2/pokemon/${poke.pokemon.name}`)
@@ -28,9 +27,7 @@ const ViewLocation = () => {
         setTimeout(() => {
             game.setPokemonsAtLocation(pokemonsArr);
             game.setIsExplored(true);
-        }, 500)
-
-
+        }, 500);
     }
     // console.log(areaData)
 

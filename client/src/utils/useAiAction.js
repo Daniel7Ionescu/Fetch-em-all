@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 export function useAiAction (turn) {
-
     const [aiAction, setAiAction] = useState("");
 
     useEffect(() => {

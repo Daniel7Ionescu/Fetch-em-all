@@ -131,5 +131,4 @@ export function useCombatScript(scriptInfo) {
         isScriptRunning, turn, p1CurrentHp, p2CurrentHp, combatLog
     }
 
-
 }

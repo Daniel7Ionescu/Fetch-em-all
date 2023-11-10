@@ -5,10 +5,7 @@ import { GameContext } from '../../../utils/GameContext';
 
 
 const Defeat = ({winner, loser, handleEndCombat}) => {
-    const game = useContext(GameContext)
-    console.log("PLayer 1:", game.player1);
-
-    console.log("Winner", winner);
+    
 
     return ( 
 

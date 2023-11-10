@@ -9,9 +9,7 @@ import IntroScreen from "./gameModes/introScreen/IntroScreen";
 import EndCombat from "./gameModes/endCombat/EndCombat";
 
 const ModeControl = () => {
-
     const game = useContext(GameContext);
-
 
     return (  
         <>      
@@ -27,17 +25,9 @@ const ModeControl = () => {
             }
             
             {game.gameMode === "introScreen" && <IntroScreen/>}
-            {game.gameMode === "startMenu" && <StartMenu/>}
-            {/* {game.gameMode === "introScreen" || game.gameMode === "startMenu" &&
-                 <div className="starter-container">
-                    {game.gameMode === "introScreen" && <IntroScreen/>}
-                    {game.gameMode === "startMenu" && <StartMenu/>}
-                </div>
-            } */}
+            {game.gameMode === "startMenu" && <StartMenu/>}         
            
-           
-        </>
-       
+        </>       
     );
 }
  

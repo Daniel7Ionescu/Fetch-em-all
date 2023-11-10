@@ -8,13 +8,9 @@ import { useAiAction } from "../../../utils/useAiAction";
 import { wait } from "../../../utils/timer";
 
 const CombatZone = () => {
-
     const game = useContext(GameContext);
-
     const [scriptInfo, setScriptInfo] = useState({});
-
     const { isScriptRunning, turn, p1CurrentHp, p2CurrentHp, combatLog } = useCombatScript(scriptInfo);
-
     const aiAction = useAiAction(turn);
 
     useEffect(() => {
@@ -24,8 +20,6 @@ const CombatZone = () => {
     }, [turn, isScriptRunning, aiAction])
 
     useEffect(()=> {
-
-
         if(p1CurrentHp <= 0 || p2CurrentHp <= 0){
             (async ()=> {
                 await wait(2000);
@@ -42,7 +36,6 @@ const CombatZone = () => {
                 game.setGameMode("endCombat")
             })()
         }
-
     }, [game, p1CurrentHp, p2CurrentHp])
 
     return (  
