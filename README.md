@@ -7,5 +7,7 @@
 ### The team
 
 Tatiana : https://github.com/TatianaMamaliga
+
 Gabriella: https://github.com/GabriellaNuca2209
+
 Dan: that's me!
